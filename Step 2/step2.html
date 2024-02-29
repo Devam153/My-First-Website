@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Step2</title>
     <link rel="stylesheet" href="step2.css">
 </head>
 
@@ -13,21 +13,26 @@
 
     <div class="container">
         <div class="image">
-            <div id="song-view">
+            <div class="song-view">
 
             </div>
         </div>
         <div class="vertical-line"></div>
-        <button class="playlist-button-select">Select Existing Playlist</button>
-        <button class="playlist-button-new">Create New Playlist</button>
 
-        <div class="manual">
-            <p>Enter playlist name</p>
-            <input type="text" placeholder="playlist name here">
-            <p>Enter playlist description</p>
-            <input type="text" placeholder="playlist description here">
-            <button>Enter</button>
+        <div class="manual-container">
+            <div class="button-container">
+                <button class="js-select-playlist-button">Select Existing Playlist</button>
+                <button class="js-create-new-button">Create New Playlist</button>
+            </div>
+            <div class="manual">
+                <p>Enter playlist name</p>
+                <input type="text" placeholder="playlist name here">
+                <p>Enter playlist description</p>
+                <input type="text" placeholder="playlist description here">
+                <button class="enter-button">Enter</button>
+            </div>
         </div>
+
     </div>
     <button class="continue" title="Continue">Continue</button>
 

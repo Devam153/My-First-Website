@@ -1,31 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const inputfile = document.getElementById("input-file");
-    const imgview = document.getElementById("img-view");
-    const uploadButton = document.getElementById("upload-button");
+// Get the buttons
+let selectPlaylistButton = document.querySelector('.js-select-playlist-button');
+let createNewButton = document.querySelector('.js-create-new-button');
 
-    uploadButton.addEventListener("click", function(e) {
-        e.stopPropagation(); // Prevents the event from bubbling up the DOM tree
-        inputfile.click();
-    });
+// Get the manual div
+let manualDiv = document.querySelector('.manual');
+let defaultContent = manualDiv.innerHTML;
 
-    inputfile.addEventListener("change", function() {
-        uploadImage();
-    });
+// Add event listeners to the buttons
+selectPlaylistButton.addEventListener('click', function() {
+    // Change the HTML inside the manual div when the select playlist button is clicked
+    manualDiv.innerHTML = '<p>Enter your existing playlist name</p> <input type="text" placeholder="playlist name here"><button class="enter-button">Enter</button>';
+});
 
-    imgview.addEventListener("dragover", function(e) {
-        e.preventDefault();
-    });
-
-    imgview.addEventListener("drop", function(e) {
-        e.preventDefault();
-        inputfile.files = e.dataTransfer.files;
-        uploadImage();
-    });
-
-    function uploadImage() {
-        let imgLink = URL.createObjectURL(inputfile.files[0]);
-        imgview.style.backgroundImage = `url(${imgLink})`;
-        imgview.textContent = '';
-        imgview.style.border = '0';
-    }
+createNewButton.addEventListener('click', function() {
+    // Change the HTML inside the manual div when the create new playlist button is clicked
+    manualDiv.innerHTML = defaultContent;
 });

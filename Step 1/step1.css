@@ -139,7 +139,13 @@ body {
     font-size: 13px;
 
 }
-
+.manual .enter-songs-manually {
+    position: absolute;
+    margin-top: -40px;
+    right: 44%;
+    font-size: 22px;
+    font-weight: bold;
+}
 .number {
     background-color: black;
     color: rgb(190, 190, 0);

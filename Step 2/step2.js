@@ -9,7 +9,7 @@ let defaultContent = manualDiv.innerHTML;
 // Add event listeners to the buttons
 selectPlaylistButton.addEventListener('click', function() {
     // Change the HTML inside the manual div when the select playlist button is clicked
-    manualDiv.innerHTML = '<p>Enter your existing playlist name</p> <input type="text" placeholder="playlist name here"><button class="enter-button">Enter</button>';
+    manualDiv.innerHTML = '<p>Enter your existing playlist name</p> <input type="text" placeholder="playlist name here"><div class="checkbox-container"><p class="checkbox-line">like songs as well:</p><input type="checkbox" class="checkbox"></div><button class="enter-button">Enter</button>';
 });
 
 createNewButton.addEventListener('click', function() {

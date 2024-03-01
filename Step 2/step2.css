@@ -48,6 +48,7 @@ body {
     height: 460px;
     margin: 0 50px;
     margin-top: 10px;
+    position: relative;
 }
 
 .manual-container{
@@ -72,7 +73,7 @@ body {
 .button-container {
     display: flex;
     position: absolute;
-    top: 50px;
+    top: 40px;
     justify-content: space-evenly;
     width: 85%;
     z-index: 1;
@@ -93,7 +94,6 @@ body {
 }
 
 .manual input {
-    min-width: 200px;
     max-width: 380px;
     padding: 10px;
     border-radius: 5px;
@@ -113,14 +113,14 @@ body {
     border: 1px solid rgb(0, 0, 0);
 
     position: absolute;
-    right: 85px;
-    bottom: 55px;
+    left: 415px;
+    bottom: 70px;
     transition: 0.2s;
 }
 .manual p{
     font-size: 18px;
     margin-left: 24px;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 }
 .manual input {
     padding: 10px;
@@ -129,7 +129,7 @@ body {
     color: white;
     height: 22px;
     margin-left: 20px;
-    margin-bottom: 22px;
+    margin-bottom: 15px;
     font-size: 16px;
     color: rgb(190, 190, 0);;
 }
@@ -138,6 +138,47 @@ body {
     color: rgb(170, 170, 170);
     font-size: 13px;
 
+}
+
+.checkbox-container {
+    display: flex;
+}
+
+.checkbox{
+    margin: 0;
+}
+
+.checkbox-line {
+    font-size: 0px;
+    font-weight: bold;
+    margin: 0;
+}
+.checkbox-container input[type="checkbox"] {
+    appearance: none;
+    background-color: rgb(40,40,40);
+    border: 2px solid black;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Style the checkbox when checked */
+.checkbox-container input[type="checkbox"]:checked {
+    background-color: rgba(29, 185, 84, 1);
+    /* Set background color when checked */
+}
+
+/* Style the checkbox tick mark */
+.checkbox-container input[type="checkbox"]:checked::before {
+    content: "\2714";
+
+    color: black;
+
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .number {
